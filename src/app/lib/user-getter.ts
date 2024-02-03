@@ -12,7 +12,6 @@ function getUserPosts(userid: string): string[] {
 function getUserName(userid: string): string {
     // TODO: Implement this function
     return "fake name";
-<<<<<<< HEAD
 }
 
 function getPosts(count: number): { userId: string, url: string }[] {
@@ -22,8 +21,6 @@ function getPosts(count: number): { userId: string, url: string }[] {
 function getUserAge(userid: string): string {
     // TODO: Implement this function
     return "";
-=======
->>>>>>> c137903d043d38e7793c321727d971e7eb94ee80
 }
 
 function getUserTitle(userid: string): string {
@@ -31,7 +28,6 @@ function getUserTitle(userid: string): string {
     return "";
 }
 
-<<<<<<< HEAD
 function getUserLocation(userid: string): string {
     // TODO: Implement this function
     return "";
@@ -53,11 +49,4 @@ function getUserSkills(userid: string): string {
 }
 
 export {getUserImage, getUserName, getUserAge, getUserTitle, getUserSkills, getUserLocation, getUserBio, 
-        getUserCompany, getUserPosts, getPosts}
-=======
-function getPosts(count: number): { userId: string, url: string }[] {
-    return Array(10).fill({userId: "fake", url: "https://source.unsplash.com/random/"});
-}
-
-export {getUserImage, getUserName, getUserPosts, getPosts};
->>>>>>> c137903d043d38e7793c321727d971e7eb94ee80
+    getUserCompany, getUserPosts, getPosts}
