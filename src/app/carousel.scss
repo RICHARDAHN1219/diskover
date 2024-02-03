@@ -1,0 +1,66 @@
+/* Carousel UI */
+$primary-background: rgb(255,253,208);
+
+body {
+  background: $primary-background;
+  background: linear-gradient(180deg, rgba(255,253,208,1) 0%, rgba(255,242,208,1) 100%);}
+
+.slider {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    width: 1000px;
+    height: 600px;
+    border: 10px;
+  }
+  
+  .right-arrow {
+    right: 12px;
+  }
+.left-arrow {
+  left: 12px;
+}
+
+  .arrow{
+    position: absolute;
+    top: 50%;
+    font-size: 3rem;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+
+    //background-color:darken($primary-background);
+    //border: solid darken($primary-background, $amount: 1);
+    background-color: darken($primary-background, $amount: 50);
+
+    padding: 0;
+    color:$primary-background;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    /*opacity: 80%;*/
+
+    &:active{
+      transform: scale(110%) ;
+      filter: brightness(85%);
+    }
+  }
+
+
+  
+  .slide {
+    display: none;
+    transition: 1s ease;
+  }
+  
+  .slide.active {
+    display: inline-block;
+    opacity: 1;
+    transition-duration: 1s;
+    transform: scale(1.08);
+  }
