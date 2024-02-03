@@ -15,7 +15,7 @@ export function SpotifyButton({ userid }: { userid: string }) {
   let style = {
     topright: {
       position: "absolute" as const,
-      top: "25vw",
+      top: "34vw",
       right: "10vw",
     },
   };

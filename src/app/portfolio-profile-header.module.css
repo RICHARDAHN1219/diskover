@@ -1,4 +1,5 @@
 .left {
+  whiteSpace: prewrap;
   display: flex;
   justify-content: left;
   align-items: left;
