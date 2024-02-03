@@ -17,7 +17,7 @@ export function Portfolio({ userid }: { userid: string }) {
       <SelfProfilePhoto userid={userid} />
       <PortfolioProfilePhoto userid={userid} />
       {getUserPosts(userid).map((postURL) => (
-        <PortfolioItem url={postURL} />
+        <PortfolioItem url={postURL}  width='90vw'/>
       ))}
       <PortfolioProfileHeader userid={userid} />
       <PortfolioProfileSkills userid={userid} />
