@@ -1,17 +1,49 @@
 "use client";
-
-import React from "react";
-import {getPosts} from "@/app/lib/user-getter";
-
-function FeedItem({userId, url}: { userId: string, url: string }) {
-    return <div style={{height: '200px', width: '100px', margin: '2em', backgroundColor: 'red'}}>Hello</div>;
-}
-
-export default function Feed() {
-    const firstBatch = getPosts(10);
+import React, { useState } from "react";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { getPosts } from "@/app/lib/user-getter";
+import styled from "styled-components";
+import "./carousel.scss"
+import {PortfolioItem} from "@/app/portfolio-item";
+import {PortfolioProfilePhoto} from "@/app/portfolio-profile-photo";
 
 
-    return <>
-        {firstBatch.map(eachPost => <FeedItem userId={eachPost.userId} url={eachPost.url}/>)}
-    </>;
-}
+
+export function Feed() {
+  const [current, setCurrent] = useState<number>(0);
+
+  const slides = getPosts(10);
+  const length = slides.length;
+
+  const nextSlide = () => {
+    setCurrent(current => ((current + 1) % length));
+  };
+
+  const prevSlide = () => {
+      setCurrent(current => ((current - 1) % length));
+  };
+
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
+
+  return (
+      <section className="slider">
+        <FaArrowAltCircleLeft className="left-arrow arrow" onClick={prevSlide} />
+        <FaArrowAltCircleRight className="right-arrow arrow" onClick={nextSlide} />
+
+        {slides.map((slide, index) =>
+            <div
+                className={index === current ? "slide active" : "slide"}
+                key={index}
+            >
+              <PortfolioItem url={slide.url} width={"80vw"}>
+                <PortfolioProfilePhoto userid={""}/>
+              </PortfolioItem>
+            </div>
+        )}
+      </section>
+  );
+};
+
+const Button = styled.button``;

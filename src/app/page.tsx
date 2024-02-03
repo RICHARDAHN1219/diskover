@@ -1,13 +1,10 @@
 import React from "react";
-import Link from 'next/link';
-import { PortfolioProfilePhoto } from './portfolio-profile-photo';
-import { Portfolio } from './portfolio';
+import {Feed} from "@/app/feed";
 
 export default function Home() {
-  return (
-    <>
-      <PortfolioProfilePhoto userid={""} />
-    </>
-  );
+    return (
+        <>
+            <Feed />
+        </>
+    );
 }
-
