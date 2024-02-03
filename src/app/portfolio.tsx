@@ -1,8 +1,7 @@
 import React from "react";
-import { PortfolioItem } from "./portfolio-item";
-import { PortfolioProfilePhoto } from "./portfolio-profile-photo";
+import {PortfolioItem} from "./portfolio-item";
+import {PortfolioProfilePhoto} from "./portfolio-profile-photo";
 import {getUserName, getUserPosts} from "@/app/lib/user-getter";
-
 
 
 function Portfolio({userid}: { userid: string }) {

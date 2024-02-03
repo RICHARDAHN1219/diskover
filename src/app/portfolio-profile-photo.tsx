@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {getUserImage, getUserName} from "./lib/user-getter";
 
-export function PortfolioProfilePhoto({userid, isOnProfile}: { userid: string, isOnProfile: boolean }) {
+export function PortfolioProfilePhoto({userid, isOnProfile}: { userid: string, isOnProfile?: boolean }) {
     isOnProfile ||= false;
 
     return <>
