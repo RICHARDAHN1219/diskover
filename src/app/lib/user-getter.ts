@@ -15,8 +15,8 @@ function getUserName(userid: string): string {
 }
 
 function getPosts(count: number): { userId: string; url: string }[] {
-    return mediaJSON.categories[0].videos.map((video) => {
-        return {url: video.sources[0], userId: ""}
+    return Array(4).fill('').map((_, i) => {
+        return {userId: "Richard", url: `/videos/${i + 1}.mp4`}
     });
     // TODO: Implement error handling and remove hard coded value.
 }
