@@ -4,6 +4,7 @@ import Image from "next/image";
 import { getUserImage, getUserName } from "./lib/user-getter";
 import React from 'react';
 import Link from 'next/link';
+import { Portfolio } from "./portfolio";
 
 export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string, isOnProfile?: boolean }) {
     isOnProfile ||= false;
@@ -36,6 +37,7 @@ export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string,
         },
         paragraph: {
             marginTop: '10px',
+            marginLeft: '10px',
             fontSize: '18px',
             fontWeight: 'bold',
             fontFamily: 'SF Pro',
@@ -46,22 +48,29 @@ export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string,
     };
 
     return (
-        
+        <>
+        {isOnProfile === false && (
+        <Link href="./portfolio">
         <div style={{...style.container, ...isOnProfile ? style["profileOnProfile"] : style.profile}}>
-          {  isOnProfile == false && (
-            //<Link href="/portfolio" >
-            <Link href="/portfolio">
+          {  
+            <>
             <Image width={50} height={50} src={getUserImage(userid)} alt="Profile photo of user" style={style.roundedImage} />
-            
             <p style={style.paragraph}>{getUserName(userid)}</p>
-            </Link>
-            )}
-
-            
-            
-            
-            
+            </>
+            } 
         </div>
-        
+        </Link>
+    )}
+    {isOnProfile === true && (
+        <div style={{...style.container, ...isOnProfile ? style["profileOnProfile"] : style.profile}}>
+          {  
+            <>
+            <Image width={50} height={50} src={getUserImage(userid)} alt="Profile photo of user" style={style.roundedImage} />
+            <p style={style.paragraph}>{getUserName(userid)}</p>
+            </>
+            } 
+        </div>
+    )}
+    </>
     );
 } 
