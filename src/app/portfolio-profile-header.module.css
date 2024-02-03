@@ -1,7 +1,8 @@
-.center {
+.left {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
+  margin: 20px
 }
 
 .centertext {

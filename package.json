@@ -9,27 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@types/next": "^9.0.0",
-    "next": "14.1.0",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-router-dom": "^6.22.0"
-=======
+    "@nextui-org/button": "^2.0.26",
+    "@nextui-org/react": "^2.2.9",
+    "@nextui-org/system": "^2.0.15",
+    "@nextui-org/theme": "^2.1.17",
     "@zeit-ui/react": "^1.8.1",
+    "framer-motion": "^11.0.3",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"
->>>>>>> ae933d00db3440932c83c4391759bff34c853ab3
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-<<<<<<< HEAD
-    "typescript": "^5.3.3"
-=======
     "typescript": "^5"
->>>>>>> ae933d00db3440932c83c4391759bff34c853ab3
   }
 }

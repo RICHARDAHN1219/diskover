@@ -6,7 +6,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Portfolio } from './portfolio';
 
-export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string, isOnProfile?: boolean }) {
+export function SelfProfilePhoto({ userid, isOnProfile }: { userid: string, isOnProfile?: boolean }) {
     isOnProfile ||= false;
 
     /* return <>
@@ -36,10 +36,10 @@ export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string,
             borderRadius: '8px',
         },
         paragraph: {
+            fontFamily: 'SF',
             marginTop: '10px',
             fontSize: '18px',
             fontWeight: 'bold',
-            fontFamily: 'SF Pro',
         },
         roundedImage: {
             borderRadius: '50%',
@@ -51,11 +51,12 @@ export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string,
         <div style={{...style.container, ...isOnProfile ? style["profileOnProfile"] : style.profile}}>
           {  isOnProfile == false && (
             //<Link href="/portfolio" >
-            <Link href= "portfolio" >
-                <Image width={50} height={50} src={getUserImage(userid)} alt="Profile photo of user" style={style.roundedImage} />
-            
-                <p style={style.paragraph}>{getUserName(userid)}</p>
-            </Link>
+            <>
+            <Link href="/">
+                <Image width={70} height={70} src={getUserImage(userid)} alt="Profile photo of user" style={style.roundedImage} />
+
+                <p style={style.paragraph}> {getUserName(userid)} </p>
+            </Link></>
             )}
 
             
