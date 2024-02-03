@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Feed from "@/app/feed";
 import { Portfolio } from "./portfolio";
-
 
 export default function Home() {
     return (

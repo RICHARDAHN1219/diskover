@@ -8,7 +8,6 @@ import { PortfolioProfileHeader } from "./portfolio-profile-header";
 
 function Portfolio({userid}: { userid: string }) {
     // TODO: implement styling and decide on other items to include in the portfolio
-
     return (
         <>
             <PortfolioProfilePhoto userid={userid}/>

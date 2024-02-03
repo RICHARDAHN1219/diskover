@@ -41,7 +41,7 @@ function getUserCompany(userid: string): string {
 function getUserBio(userid: string): string {
     //TODO: Implement this function (description)
     //This is the description about the artist more in depth
-    return "Known for his exceptional skills as a multi-instrumentalist, Richard not only excels in playing traditional instruments but also embraces cutting-edge technologies to produce innovative sounds. His commitment to pushing musical boundaries has earned him acclaim from both critics and fans alike, establishing him as a trailblazer in the contemporary music scene. Beyond his technical prowess, Richard's lyrical compositions delve into the human experience, exploring themes of love, introspection, and societal observations. His poetic and evocative lyrics have the power to transport listeners to different emotional landscapes, creating a profound connection between the artist and the audience. Richard's live performances are a testament to his magnetic stage presence and ability to create an immersive and unforgettable experience. Whether performing in an intimate acoustic setting or commanding a grand stage with a full band, his musical charisma leaves a lasting impression on those fortunate enough to witness his artistry in person. As a dedicated musician, Richard continues to evolve and redefine his sound, showcasing an enduring commitment to artistic growth. His contributions to the world of music extend far beyond mere entertainment, leaving an indelible mark on the hearts and minds of those who appreciate the beauty and power of exceptional musical expression.";
+    return "description";
 }
 
 function getUserSkills(userid: string): string[] {
