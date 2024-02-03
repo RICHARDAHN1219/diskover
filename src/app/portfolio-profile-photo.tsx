@@ -6,6 +6,6 @@ export function PortfolioProfilePhoto({userid, isOnProfile}: { userid: string, i
 
     return <>
         <Image width={200} height={200} src={getUserImage(userid)} alt="Profile photo of user"/>
-        <p>{getUserName(userid)}</p>
+        <h1>{getUserName(userid)}</h1>
     </>;
 }

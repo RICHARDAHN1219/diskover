@@ -1,6 +1,7 @@
 import Image from "next/image";
 import {getUserName, getUserAge, getUserTitle, getUserLocation, getUserCompany, getUserBio} from "./lib/user-getter";
 
+//Provides core information to also be shown on the main profile image
 export function PortfolioProfileHeader({userid, isOnProfile}: { userid: string, isOnProfile?: boolean }) {
     isOnProfile ||= false;
     const age = getUserAge(userid);
@@ -10,7 +11,6 @@ export function PortfolioProfileHeader({userid, isOnProfile}: { userid: string, 
     const bio_description = getUserBio(userid)
 
     return <>
-        <h3>{getUserName(userid)}</h3>
         <p>{age} | {title} | {location} | {company}</p>
         <div>
             <h2>About Me:</h2>
