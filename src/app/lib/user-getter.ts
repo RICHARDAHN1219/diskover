@@ -11,7 +11,7 @@ function getUserPosts(userid: string): string[] {
 
 function getUserName(userid: string): string {
     // TODO: Implement this function
-    return "Richard";
+    return "Richard Ahn";
 }
 
 function getPosts(count: number): { userId: string, url: string }[] {
@@ -41,7 +41,7 @@ function getUserCompany(userid: string): string {
 function getUserBio(userid: string): string {
     //TODO: Implement this function (description)
     //This is the description about the artist more in depth
-    return "description";
+    return "Known for his exceptional skills as a multi-instrumentalist, Richard not only excels in playing traditional instruments but also embraces cutting-edge technologies to produce innovative sounds. His commitment to pushing musical boundaries has earned him acclaim from both critics and fans alike, establishing him as a trailblazer in the contemporary music scene. Beyond his technical prowess, Richard's lyrical compositions delve into the human experience, exploring themes of love, introspection, and societal observations. His poetic and evocative lyrics have the power to transport listeners to different emotional landscapes, creating a profound connection between the artist and the audience.";
 }
 
 function getUserSkills(userid: string): string[] {
@@ -59,5 +59,10 @@ function getMessage(): string {
     return "Message";
 }
 
+
+function getUserSpotify(userid: string): string {
+    return "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4";
+}
+
 export {getUserImage, getUserName, getUserAge, getUserTitle, getUserSkills, getUserLocation, getUserBio, 
-    getUserCompany, getUserPosts, getPosts, getUserUpcomingEvents, getMessage}
+    getUserCompany, getUserPosts, getPosts, getUserUpcomingEvents, getUserSpotify, getMessage}

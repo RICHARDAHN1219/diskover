@@ -12,10 +12,10 @@ export function PortfolioProfileHeader({userid, isOnProfile}: { userid: string, 
     const bio_description = getUserBio(userid)
 
     return <>
-        <p className = {styles.center}>{age} | {title} | {location} | {company}</p>
+        <p className = {styles.left}>{age} | {title} | {location} | {company}</p>
         <div>
-            <h2 className = {styles.center}>About Me:</h2>
-            <p className = {styles.center}> {bio_description} </p>
+            <h2 className = {styles.left}>About Me:</h2>
+            <p className = {styles.left}> {bio_description} </p>
         </div>
 
 

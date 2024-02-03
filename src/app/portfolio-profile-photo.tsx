@@ -1,15 +1,21 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { getUserImage, getUserName } from "./lib/user-getter";
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 import { Portfolio } from "./portfolio";
 
-export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string, isOnProfile?: boolean }) {
-    isOnProfile ||= false;
+export function PortfolioProfilePhoto({
+  userid,
+  isOnProfile,
+}: {
+  userid: string;
+  isOnProfile?: boolean;
+}) {
+  isOnProfile ||= false;
 
-    /* return <>
+  /* return <>
          <Image width={200} height={200} src={getUserImage(userid)} alt="Profile photo of user" className = "rounded" />
          <p>{getUserName(userid)}</p>
      </>;*/
@@ -67,12 +73,18 @@ export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string,
         <div style={{...style.container, ...isOnProfile ? style["profileOnProfile"] : style.profile}}>
           {  
             <>
-            <Image width={50} height={50} src={getUserImage(userid)} alt="Profile photo of user" style={style.roundedImage} />
-            <p style={style.paragraph}>{getUserName(userid)}</p>
+              <Image
+                width={50}
+                height={50}
+                src={getUserImage(userid)}
+                alt="Profile photo of user"
+                style={style.roundedImage}
+              />
+              <p style={style.paragraph}>{getUserName(userid)}</p>
             </>
-            } 
+          }
         </div>
-    )}
+      )}
     </>
-    );
-} 
+  );
+}
