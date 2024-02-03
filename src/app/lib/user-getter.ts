@@ -16,7 +16,7 @@ function getUserName(userid: string): string {
 
 function getPosts(count: number): { userId: string; url: string }[] {
     return Array(4).fill('').map((_, i) => {
-        return {userId: "Richard", url: `/videos/${i + 1}.mp4`}
+        return {userId: "Richard", url: `https://github.com/DavidTeju/diskover/blob/main/public/videos/${i + 1}.MP4?raw=true`};
     });
     // TODO: Implement error handling and remove hard coded value.
 }
