@@ -5,6 +5,10 @@ body {
   background: $primary-background;
   background: linear-gradient(180deg, rgba(255,253,208,1) 0%, rgba(255,242,208,1) 100%);}
 
+.feed-header {
+  background-color: darken($primary-background, $amount: 20);
+}
+
 .slider {
     position: relative;
     height: 100vh;
@@ -64,3 +68,4 @@ body {
     transition-duration: 1s;
     transform: scale(1.08);
   }
+
