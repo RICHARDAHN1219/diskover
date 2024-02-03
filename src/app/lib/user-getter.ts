@@ -54,5 +54,10 @@ function getUserUpcomingEvents(userid: string): string[] {
     return ["Live Tour"];
 }
 
+function getMessage(): string {
+    // TODO: Implement this function
+    return "Message";
+}
+
 export {getUserImage, getUserName, getUserAge, getUserTitle, getUserSkills, getUserLocation, getUserBio, 
-    getUserCompany, getUserPosts, getPosts, getUserUpcomingEvents}
+    getUserCompany, getUserPosts, getPosts, getUserUpcomingEvents, getMessage}

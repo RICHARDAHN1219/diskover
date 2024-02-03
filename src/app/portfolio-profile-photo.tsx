@@ -19,28 +19,28 @@ export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string,
             alignItems: 'center',
             textAlign: 'center' as const,
             margin: isOnProfile ? '20px' : '20px',
-            border: isOnProfile ? '2px solid #ccc' : 'none',
+            border: isOnProfile ? 'none' : 'none',
             padding: isOnProfile ? '10px' : '10px',
             borderRadius: isOnProfile ? '8px' : '10px',
         },
         profile:
         {
-            textAlign: 'center' as const,
+            textAlign: 'left' as const,
             margin: '10px'
         },
         profileOnProfile: {
             textAlign: 'center' as const,
             margin: '20px',
-            border: '2px solid #ccc',
+            border: 'none',
             padding: '10px',
             borderRadius: '8px',
         },
         paragraph: {
-            marginTop: '10px',
+           // marginTop: '10px',
             marginLeft: '10px',
             fontSize: '18px',
             fontWeight: 'bold',
-            fontFamily: 'SF Pro',
+            fontFamily: 'Calibri',
         },
         roundedImage: {
             borderRadius: '50%',
@@ -50,16 +50,18 @@ export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string,
     return (
         <>
         {isOnProfile === false && (
-        <Link href="./portfolio">
+        //<Link href="./portfolio">
         <div style={{...style.container, ...isOnProfile ? style["profileOnProfile"] : style.profile}}>
           {  
+            <Link href="./portfolio">
             <>
             <Image width={50} height={50} src={getUserImage(userid)} alt="Profile photo of user" style={style.roundedImage} />
             <p style={style.paragraph}>{getUserName(userid)}</p>
             </>
+            </Link>
             } 
         </div>
-        </Link>
+        //</Link>
     )}
     {isOnProfile === true && (
         <div style={{...style.container, ...isOnProfile ? style["profileOnProfile"] : style.profile}}>

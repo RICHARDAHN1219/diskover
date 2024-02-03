@@ -1,5 +1,5 @@
 import { Portfolio} from "@/app/portfolio";
 
 export default function Home(){
-    return <Portfolio userid={""}/>
+    return <Portfolio userid={"userid"}/>
 }
