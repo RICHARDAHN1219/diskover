@@ -11,6 +11,8 @@ function Portfolio({userid}: { userid: string }) {
         <>
             <PortfolioProfilePhoto userid={userid}/>
             {getUserPosts(userid).map(postURL => <PortfolioItem url={postURL}/>)}
+
+            <></>
         </>
     );
 }
