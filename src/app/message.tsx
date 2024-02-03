@@ -2,7 +2,6 @@
 
 import React from "react";
 import { MessagePhoto } from "./message-icon";
-import { getMessage } from "@/app/lib/user-getter";
 
 export function Message() {
     // Assuming you have a dynamic user ID, replace 'dynamicUserId' with the actual user ID

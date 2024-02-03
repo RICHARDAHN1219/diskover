@@ -1,10 +1,8 @@
 "use client"
 
-import Image from "next/image";
-import { getMessage} from "./lib/user-getter";
+import {getMessage} from "./lib/user-getter";
 import React from 'react';
 import Link from 'next/link';
-import { Portfolio } from "./portfolio";
 
 export function MessagePhoto(): JSX.Element {
     //isOnProfile ||= false;
@@ -56,7 +54,6 @@ export function MessagePhoto(): JSX.Element {
             </Link>
         </>
     );*/
-    const dynamicUserId = "123"; // Replace this with your actual logic to get the user ID
 
     return (
         <Link href="/message">
@@ -70,10 +67,10 @@ export function MessagePhoto(): JSX.Element {
                         margin: '0',
                     }}
                 >
-                    {getMessage()} 
+                    {getMessage()}
                 </button>
             </>
         </Link>
     );
-    
-} 
+
+}
