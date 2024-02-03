@@ -7,6 +7,7 @@ import {getUserPosts} from "@/app/lib/user-getter";
 import { PortfolioProfileSkills } from "./portfolio-profile-skills";
 import { PortfolioProfileHeader } from "./portfolio-profile-header";
 import { SelfProfilePhoto } from "./profile-photo-self";
+import { SpotifyButton } from "./portfolio-spotify";
 
 
 export function Portfolio({userid}: { userid: string }) {
@@ -14,10 +15,11 @@ export function Portfolio({userid}: { userid: string }) {
     //<PortfolioProfilePhoto userid={userid}/>
     return (
         <>
-            <PortfolioProfilePhoto userid={userid} />
+            <SelfProfilePhoto userid={userid} />
             {getUserPosts(userid).map(postURL => <PortfolioItem url={postURL}/>)}
             <PortfolioProfileHeader userid = {userid} />
             <PortfolioProfileSkills userid = {userid} />
+            <SpotifyButton userid={""} />
         </>
     );
 }

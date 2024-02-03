@@ -54,5 +54,9 @@ function getUserUpcomingEvents(userid: string): string[] {
     return ["Live Tour"];
 }
 
+function getUserSpotify(userid: string): string {
+    return "https://open.spotify.com/artist/3TVXtAsR1Inumwj472S9r4";
+}
+
 export {getUserImage, getUserName, getUserAge, getUserTitle, getUserSkills, getUserLocation, getUserBio, 
-    getUserCompany, getUserPosts, getPosts, getUserUpcomingEvents}
+    getUserCompany, getUserPosts, getPosts, getUserUpcomingEvents, getUserSpotify}

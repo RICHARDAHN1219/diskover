@@ -40,7 +40,7 @@ export function PortfolioProfilePhoto({ userid, isOnProfile }: { userid: string,
             marginLeft: '10px',
             fontSize: '18px',
             fontWeight: 'bold',
-            fontFamily: 'SF Pro',
+            fontFamily: 'Calibri',
         },
         roundedImage: {
             borderRadius: '50%',

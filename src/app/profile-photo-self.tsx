@@ -5,6 +5,8 @@ import { getUserImage, getUserName } from "./lib/user-getter";
 import React from 'react';
 import Link from 'next/link';
 import { Portfolio } from './portfolio';
+import home_icon from './icons/homepage-icon-png.png'
+
 
 export function SelfProfilePhoto({ userid, isOnProfile }: { userid: string, isOnProfile?: boolean }) {
     isOnProfile ||= false;
@@ -53,7 +55,7 @@ export function SelfProfilePhoto({ userid, isOnProfile }: { userid: string, isOn
             //<Link href="/portfolio" >
             <>
             <Link href="/">
-                <Image width={70} height={70} src={getUserImage(userid)} alt="Profile photo of user" style={style.roundedImage} />
+                <Image width={70} height={70} src= "/icons/homepage-icon-png.png" alt="Home Icon" />
 
                 <p style={style.paragraph}> {getUserName(userid)} </p>
             </Link></>
