@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import {PortfolioItem} from "./portfolio-item";
 import {PortfolioProfilePhoto} from "./portfolio-profile-photo";
@@ -7,17 +9,17 @@ import { PortfolioProfileHeader } from "./portfolio-profile-header";
 import { SelfProfilePhoto } from "./profile-photo-self";
 
 
-function Portfolio({userid}: { userid: string }) {
+export function Portfolio({userid}: { userid: string }) {
     // TODO: implement styling and decide on other items to include in the portfolio
     //<PortfolioProfilePhoto userid={userid}/>
     return (
         <>
-            <SelfProfilePhoto userid = ""/>
+            <PortfolioProfilePhoto userid={userid} />
             {getUserPosts(userid).map(postURL => <PortfolioItem url={postURL}/>)}
-            <PortfolioProfileHeader userid = ""/>
-            <PortfolioProfileSkills userid = ""/>
+            <PortfolioProfileHeader userid = {userid} />
+            <PortfolioProfileSkills userid = {userid} />
         </>
     );
 }
 
-export {Portfolio};
+//export {Portfolio};
