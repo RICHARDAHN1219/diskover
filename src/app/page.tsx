@@ -5,5 +5,4 @@ export default function Home() {
     <PortfolioProfilePhoto userid={""}/>
     </>;
 // TODO: replace with your component to test
-
 }
